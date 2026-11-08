@@ -101,14 +101,18 @@
 npx skills add Vincentwei1021/video-shotcraft
 ```
 
-或者手动安装：
+或者手动安装（按所用 Agent 选择对应的两条命令）：
 
 ```bash
 git clone https://github.com/Vincentwei1021/video-shotcraft.git
 cd video-shotcraft
-ln -s "$(pwd)" ~/.claude/skills/video-shotcraft   # Claude Code
-ln -s "$(pwd)" ~/.codex/skills/video-shotcraft    # Codex
+mkdir -p ~/.claude/skills                     # Claude Code
+ln -s "$(pwd)" ~/.claude/skills/video-shotcraft
+mkdir -p ~/.codex/skills                      # Codex
+ln -s "$(pwd)" ~/.codex/skills/video-shotcraft
 ```
+
+如果目标 skills 目录中已存在名为 `video-shotcraft` 的文件、目录或软链接，请先检查，不要直接覆盖。
 
 国内访问 GitHub 慢的话，可以从 AtomGit 镜像克隆：
 `git clone https://atomgit.com/VincentWei/video-shotcraft.git`。

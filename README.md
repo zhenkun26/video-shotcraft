@@ -105,14 +105,18 @@ Or with the [skills](https://skills.sh/) CLI:
 npx skills add Vincentwei1021/video-shotcraft
 ```
 
-Or by hand:
+Or by hand (run the pair of commands for the agent you use):
 
 ```bash
 git clone https://github.com/Vincentwei1021/video-shotcraft.git
 cd video-shotcraft
-ln -s "$(pwd)" ~/.claude/skills/video-shotcraft   # Claude Code
-ln -s "$(pwd)" ~/.codex/skills/video-shotcraft    # Codex
+mkdir -p ~/.claude/skills                     # Claude Code
+ln -s "$(pwd)" ~/.claude/skills/video-shotcraft
+mkdir -p ~/.codex/skills                      # Codex
+ln -s "$(pwd)" ~/.codex/skills/video-shotcraft
 ```
+
+If a `video-shotcraft` file, directory, or symlink already exists in the target skills directory, inspect it before proceeding; do not overwrite it blindly.
 
 In mainland China, clone from the AtomGit mirror if GitHub is slow:
 `git clone https://atomgit.com/VincentWei/video-shotcraft.git`.

@@ -105,14 +105,18 @@ Install this skill for me: https://github.com/Vincentwei1021/video-shotcraft
 npx skills add Vincentwei1021/video-shotcraft
 ```
 
-Или вручную:
+Или вручную (выполните пару команд для используемого агента):
 
 ```bash
 git clone https://github.com/Vincentwei1021/video-shotcraft.git
 cd video-shotcraft
-ln -s "$(pwd)" ~/.claude/skills/video-shotcraft   # Claude Code
-ln -s "$(pwd)" ~/.codex/skills/video-shotcraft    # Codex
+mkdir -p ~/.claude/skills                     # Claude Code
+ln -s "$(pwd)" ~/.claude/skills/video-shotcraft
+mkdir -p ~/.codex/skills                      # Codex
+ln -s "$(pwd)" ~/.codex/skills/video-shotcraft
 ```
+
+Если в целевом каталоге skills уже есть файл, каталог или символическая ссылка `video-shotcraft`, сначала проверьте их. Не перезаписывайте их без проверки.
 
 В материковом Китае, если GitHub работает медленно, клонируйте зеркало AtomGit:
 `git clone https://atomgit.com/VincentWei/video-shotcraft.git`.
