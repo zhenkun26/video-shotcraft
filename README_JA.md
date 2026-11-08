@@ -95,14 +95,18 @@ Claude Code と Codex 向けに作り、調整しています。いちばん簡�
 npx skills add Vincentwei1021/video-shotcraft
 ```
 
-手動の場合：
+手動の場合（使用するエージェントに対応する 2 つのコマンドを実行）：
 
 ```bash
 git clone https://github.com/Vincentwei1021/video-shotcraft.git
 cd video-shotcraft
-ln -s "$(pwd)" ~/.claude/skills/video-shotcraft   # Claude Code
-ln -s "$(pwd)" ~/.codex/skills/video-shotcraft    # Codex
+mkdir -p ~/.claude/skills                     # Claude Code
+ln -s "$(pwd)" ~/.claude/skills/video-shotcraft
+mkdir -p ~/.codex/skills                      # Codex
+ln -s "$(pwd)" ~/.codex/skills/video-shotcraft
 ```
+
+対象の skills ディレクトリに `video-shotcraft` というファイル、ディレクトリ、またはシンボリックリンクが既にある場合は、先に確認し、むやみに上書きしないでください。
 
 ## 使い方
 
